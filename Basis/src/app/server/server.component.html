@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">          
+            
+            <button class="btn btn-primary" (click)="onReset()">Display details</button>
+
+            <p *ngIf="control">Secret Password = tuna</p>
+
+            <div *ngFor="let click of clicks" [ngStyle]="{backgroundColor: click >= 5 ? 'blue' : 'transparent'}">
+                {{click}}
+            </div>
+        </div>
+    </div>
+</div>
