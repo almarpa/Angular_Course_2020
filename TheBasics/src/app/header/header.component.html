@@ -1,27 +1,31 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a href="#" class="navbar-brand">Recipe Book</a>
-        </div>
-       
-        <div class="navbar-collapse">
-            <ul class="navbar-nav mr-auto" >
-                <li>
-                    <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav my-2 my-lg-0">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Save Data</a></li>
-                        <li><a href="#">Fetch Data</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Recipe Book</a>
     </div>
+
+    <div class="navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li>
+          <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#" (click)="onSelect('shopping-list')"
+            >Shopping List</a
+          >
+        </li>
+      </ul>
+      <ul class="navbar-nav my-2 my-lg-0">
+        <!-- Example single danger button -->
+        <div class="btn-group">
+          <a href="#" type="button" class="dropdown-toggle" data-toggle="dropdown">Manage<span class="caret"></span></a>
+          <ul class="dropdown-menu" appDropdown>
+            <li><a href="#">Save Data</a></li>
+            <div class="dropdown-divider"></div>
+            <li><a href="#">Fetch Data</a></li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+  </div>
 </nav>
