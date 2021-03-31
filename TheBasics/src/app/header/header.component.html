@@ -6,25 +6,29 @@
 
     <div class="navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        <li>
-          <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/recipes">Recipes</a>
         </li>
-        <li>
-          <a class="nav-link" href="#" (click)="onSelect('shopping-list')"
-            >Shopping List</a
-          >
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/shopping-list">Shopping List</a>
         </li>
       </ul>
-      <ul class="navbar-nav my-2 my-lg-0">
-        <!-- Example single danger button -->
-        <div class="btn-group">
-          <a href="#" type="button" class="dropdown-toggle" data-toggle="dropdown">Manage<span class="caret"></span></a>
-          <ul class="dropdown-menu" appDropdown>
-            <li><a href="#">Save Data</a></li>
-            <div class="dropdown-divider"></div>
-            <li><a href="#">Fetch Data</a></li>
-          </ul>
-        </div>
+      <ul class="navbar-nav navbar-right">
+        <li class="nav-item dropdown" appDropdown>
+          <a
+            style="cursor: pointer"
+            class="dropdown-toggle"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            >Manage <span class="caret"></span
+          ></a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" style="cursor: pointer">Save Data</a>
+            <a class="dropdown-item" style="cursor: pointer">Fetch Data</a>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
